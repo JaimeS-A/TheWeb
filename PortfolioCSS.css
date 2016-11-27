@@ -1,0 +1,180 @@
+	
+	body {
+		margin: 0px;
+		padding: 0px;
+		background-color: #e9e9e9;
+		font-family: "Courier New", Courier, monospace;
+		background-image: url(background.png), url(backgroundpart2.png);
+		background-position: -9px 0px, -9px 1070px;
+		background-repeat: no-repeat, no-repeat;
+	}
+		
+	.header {
+			border: 1px #eaeaea solid;
+			background-color: white;
+			height: 100%;
+			right: 0px;
+			position: fixed;
+			width: 25%;
+			z-index: 10;
+	}
+		
+	
+	#stripe{
+		background-color: #b20000; height: 100%; width: .5%;
+		left: 0px; position: fixed;
+		z-index: 10;
+	}
+	
+	img.logo {
+		right: 1.5vh;
+		position: fixed;
+		width: 10vw;
+		font-size: 3vw;
+		z-index: 10;
+	}
+	
+	.nav {
+		position: fixed;
+		list-style: none;
+		right: 12vw;
+		top: 24.5vh; 
+		font-size: 2.5vw;
+		z-index: 10;
+	}
+	.nav > li {padding-bottom: 9vh;}
+	.nav > li > a {text-decoration: none; display: inline-block; color: black; text-shadow: 0px 2px 2px silver; transition: color 1.1s ease 0s;}
+	.nav > li > a:after {content: ' '; display: block; width: 0%; height: 2px; background: #b20000; transition: width .5s;}
+	.nav > li > a:hover {color: #b20000; transition: color 1s ease 0s;}
+	.nav > li > a:hover:after {width: 100%; transition: width .5s;}
+	
+	div.navicons {
+		transition: /* opacity */
+	}
+	
+	img.abouticon {
+		position: fixed;
+		width: 4vw;
+		padding-bottom: 100px;
+		right: 10vw;
+		top: calc(25vh + 1.5vw);
+		z-index: 10;
+	}
+	img.workicon {
+		position: fixed;
+		width: 5vw;
+		right: 11.2vw;
+		top: calc(34.2vh + 4vw);
+		z-index: 10;
+	}
+	img.contacticon {
+		position: fixed;
+		width: 4vw;
+		right: 6.9vw;
+		top: calc(43vh + 7.5vw);
+		z-index: 10;
+	}
+	
+	/*Make the icons invisible at first and have them fade in when in the right section of the webpage */
+	
+	/*Writing.*/
+	
+	
+	div.about {
+		display: block;
+		font-size: 19px;
+		position: absolute;
+		top: 400px;
+		left: 175px;
+		width: 1140px;
+		z-index: 0;
+	}
+
+	div.abouttitle {
+		display: block;
+		position: absolute;
+		top: 1150px;
+		left: 210px;
+		z-index: 0;	
+		font-size: 18px;
+	}
+	#title1 {font-size: 60px; font-weight: normal; left: 25px; position: absolute; width: 1000px;}
+	#p1 {position: absolute; left: -230px; top: 200px; width: 580px;}
+	#computericon {position: absolute; left: 360px; top: 133px;}
+	#computericon:hover{
+	animation: shake 1.2s cubic-bezier(.36,.07,.19,.97) both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+	}
+	#p2 {position: absolute; left: 300px; top: 450px; width: 570px;}
+	#writingicon { position: absolute; top: 390px; left: -20px; }
+	#writingicon:hover{
+	animation: shake 1.2s cubic-bezier(.36,.07,.19,.97) both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+	}
+	#p3 {position: absolute; left: -230px; top: 650px; width: 580px;}
+	#PSicon {position: absolute; left: 360px; top: 583px; }
+	#PSicon:hover{
+	animation: shake 1.2s cubic-bezier(.36,.07,.19,.97) both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+	}
+	#line {position: absolute; font-size: 50px; top: 900px; left: 320px; color: white;  text-shadow: -1px 0 #c1c1c1, 0 1px #c1c1c1, 1px 0 #c1c1c1, 0 -1px #c1c1c1;}
+	
+	div.work {
+		display: block;
+		position: absolute;
+		top: 2600px;
+		left: 625px;
+		font-size: 30px;	
+	}
+	
+	#worktitle {font-weight: normal;}
+	#workwarning {position: absolute; font-size: 25px; left: -175px; top: 200px; width: 601px; border: 1px #b20000 solid; padding: 10px;}
+	#line2 {position: absolute; font-size: 50px; top: 400px; left: 80px; color: white;  text-shadow: -1px 0 #c1c1c1, 0 1px #c1c1c1, 1px 0 #c1c1c1, 0 -1px #c1c1c1;}
+	
+	div.contact {
+		display: block;
+		position: absolute;
+		top: 3150px;
+		left: 570px;
+		font-size: 30px;
+	}
+	
+	#contacttitle { font-weight: normal; }
+	#email {position: absolute; font-size: 25px; left: -100px; width: 1000px; }
+	#space {position: absolute; bottom: -2800px; height: 100px; width: 150px;}
+	
+/* animations */
+	@keyframes shake {
+		
+		10%, 90% {
+			transform: translate3d(-1px, 0, 0);
+	}
+  
+	20%, 80% {
+    transform: translate3d(2px, 0, 0);
+	}
+
+	30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+	}
+
+	40%, 60% {
+    transform: translate3d(4px, 0, 0);
+	}
+}
+
+
+	
+	/* http://www.w3schools.com/css/css_image_sprites.asp "!!!SPRITES TUTORIAL!!!" */
+	/* http://www.w3schools.com/css/css_positioning.asp */
+	/* http://www.w3schools.com/bootstrap/bootstrap_ref_comp_glyphs.asp */
+	/* https://drafts.csswg.org/css-values/#viewport-relative-lengths */
+	/* Neat background colours: #184B56,             */
+	
+	
